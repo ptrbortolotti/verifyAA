@@ -1,7 +1,7 @@
 ------- Noise Module v1.00.* BLADE DEFINITION INPUT FILE -------------------------------------
 NREL 5.0 MW offshore baseline aerodynamic blade input properties
 ======  Blade Properties =================================================================
-         19   NumBlNds           - Number of blade nodes used in the analysis (-)
+         30   NumBlNds           - Number of blade nodes used in the analysis (-)
      TEAngle        TEThick       Stall Level
       (deg)            (m)           (deg) 
 10.000000E+00  0.00500E+00      8.00000E+00
@@ -22,4 +22,15 @@ NREL 5.0 MW offshore baseline aerodynamic blade input properties
 10.000000E+00  0.00500E+00     15.69700E+00 
 10.000000E+00  0.00500E+00     15.81820E+00 
 10.000000E+00  0.00500E+00     15.93940E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
+10.000000E+00  0.00500E+00     16.00000E+00 
 10.000000E+00  0.00500E+00     16.00000E+00 
