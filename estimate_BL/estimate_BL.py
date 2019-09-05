@@ -17,10 +17,10 @@ inputs_list  = []
 outputs_list = []
 for i in range(n_stations):
         if i < 10: 
-            inputs_list.append(folder_inputs   + '/RotorSE_FAST_IEA_landBased_RWT_AeroDyn15_coords_0' + str(i) + '.txt')    # List of files containing the airfoil coordinates
+            inputs_list.append(folder_inputs   + '/AF0' + str(i) + '_Coords.txt')    # List of files containing the airfoil coordinates
         else:
-            inputs_list.append(folder_inputs   + '/RotorSE_FAST_IEA_landBased_RWT_AeroDyn15_coords_' + str(i) + '.txt')    # List of files containing the airfoil coordinates
-        outputs_list.append(folder_outputs + '/AF' + str(i + 1) + 'BL_TripMod' + str(trip) + '.txt')      # List of files containing the boundary layer characteristics
+            inputs_list.append(folder_inputs   + '/AF' + str(i) + '_Coords.txt')    # List of files containing the airfoil coordinates
+        outputs_list.append(folder_outputs + '/AF' + str(i) + '_BL.txt')      # List of files containing the boundary layer characteristics
 
 
 for id in range(5,len(inputs_list)):
