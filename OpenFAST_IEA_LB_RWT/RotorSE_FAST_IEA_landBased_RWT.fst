@@ -13,7 +13,7 @@ True                   Echo        - Echo input data to <RootName>.ech (flag)
 1                      CompElast   - 
 1                      CompInflow  - 
 2                      CompAero    - 
-1                      CompServo   - 
+0                      CompServo   - 
 0                      CompHydro   - 
 0                      CompSub     - 
 0                      CompMooring - 
