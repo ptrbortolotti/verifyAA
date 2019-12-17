@@ -28,15 +28,15 @@ import seaborn as sb
 ## User inputs
 
 # location for AAOutputFile3 and Test18_OF2 files
-input_dir = r"C:\\openfast-noise-3\noite-test\_outputs-OF2"
+input_dir = '../OpenFAST_IEA_LB_RWT/'
 
 # desired location for processed results
-output_dir = r"C:\\Users\mphillip\Documents\openfast\Poster Images-Data\New Model"
+output_dir = '../OpenFAST_IEA_LB_RWT/'
 
 # appended name for AAOutputFile3: (i.e. yaw10deg_AAOutputFile3.out => outputname = "yaw10deg_". Leave outputname = "" if no modification
 outputname = ""
 AAname = outputname + "AAOutputFile3.out"
-OF2name = outputname + "Test18_OF2.out"
+OF2name = outputname + "RotorSE_FAST_IEA_landBased_RWT.outb"
 
 # number of revolutions (n) to calculate SPL
 n = 1
@@ -49,9 +49,9 @@ save_data = False
 #########################################################################################################################################
 
 # produces full path
-AAfilename = input_dir + '\\' + AAname
-OF2filename = input_dir + '\\' + OF2name
-outputfilename = output_dir + '\\' + outputname + "AAOutputFile3"
+AAfilename = input_dir + '/' + AAname
+OF2filename = input_dir + '/' + OF2name
+outputfilename = output_dir + '/' + outputname + "AAOutputFile3"
 
 # read file data
 AA_3 = weio.FASTOutFile(AAfilename).toDataFrame()
