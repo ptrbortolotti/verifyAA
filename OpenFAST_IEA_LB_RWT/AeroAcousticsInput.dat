@@ -5,19 +5,19 @@ False        Echo         - Echo the input to "<rootname>.AD.ech"?  (flag)
 "default"    DTAero       - Time interval for aerodynamic calculations (s)  (or "default")
 1            AAStart      - Time step after witch the AeroAcoustics module is run (integer) TODO Unpractical, may need to be changed
 20           SaveEach     - Time step interval to run AeroAcoustics module (integer)        TODO Unpractical, may need to be changed
-0            BluntMod     - Bluntness model {0:none, 1: BPM}  (switch)
-0            LamMod       - Laminar boundary layer noise model {0:none, 1: BPM}  (switch)
-0            TipMod       - Tip noise model {0:none, 1: BPM}  (switch)
-0            TripMod      - Boundary layer trip model {0:no trip, 1: heavy trip (BPM only), 2: light trip, reads in tripped xfoil BL if TripMod>0 and XfoilCall=0 and BLMod=2} (switch)  
-1            TBLTEMod     - Turbulent Boundary Layer-Trailing Edge noise calculation {0: none, 1:BPM, 2: TNO} (switch)
-2            TIMod        - Turbulent Inflow noise model  {0: none, 1:Amiet (flat plate), 2: Simplified Guidati} (switch) 
-2            BLMod        - Calculation method for boundary layer properties,  {1: BPM, 2: Pretabulated} (switch)
-1            TICalcMeth   - Method to estimate Turbulence Intensity {1:TI value interpolated from a given table, 2:TI computed on the fly} (switch)
-True         RoundedTip   - Logical indicating rounded tip (flag)
-1.0          Alprat       - Tip lift curve slope (Default = 1.0)      
 70           BldPrcnt     - Percentage of the blade span, starting from the tip, that will contribute to the overall noise levels. (float)
-0.5          SurfRoughness- Surface Roughness value (m) [only used if TICalcMeth=1]
-False        AWeighting   - A-weighting Flag (flag)  
+======  Aeroacoustic Models  ============================================================================
+2            TIMod        - Turbulent Inflow noise model  {0: none, 1: Amiet 2: Amiet + Simplified Guidati} (switch) 
+1            TICalcMeth   - Method to estimate turbulence intensity incident to the profile {1: given table, 2: computed on the fly} (switch) [Only used if TIMod!=0]
+0.5          SurfRoughness- Surface roughness value used to estimate the turbulent length scale in Amiet model (m)
+1            TBLTEMod     - Turbulent Boundary Layer-Trailing Edge noise calculation {0: none, 1:BPM, 2: TNO} (switch)
+2            BLMod        - Calculation method for boundary layer properties,  {1: BPM, 2: Pretabulated} (switch)
+0            TripMod      - Boundary layer trip model {0:no trip, 1: heavy trip, 2: light trip} (switch) [Only used if BLMod=1]
+0            LamMod       - Laminar boundary layer noise model {0:none, 1: BPM}  (switch)
+0            TipMod       - Tip vortex noise model {0:none, 1: BPM}  (switch)
+True         RoundedTip   - Logical indicating rounded tip (flag) [Only used if TipMod=1]
+1.0          Alprat       - Tip lift curve slope (Default = 1.0) [Only used if TipMod=1]
+0            BluntMod     - Trailing-edge-bluntness – Vortex-shedding model {0:none, 1: BPM}  (switch)
 ======  Observer Input  ===================================================================
 1    NrObsLoc - Total Number of  observer locations
 "AA_ObserverLocations.dat"    ObserverLocations        - Name of file containing all observer locations X Y Z (-)
@@ -26,6 +26,7 @@ False        AWeighting   - A-weighting Flag (flag)
 "AABlade1.dat"    AABlFile(2)   - Name of file containing distributed aerodynamic properties for Blade #2 (-)
 "AABlade1.dat"    AABlFile(3)   - Name of file containing distributed aerodynamic properties for Blade #3 (-)
 ======  Outputs  ====================================================================================
+False             AWeighting  - A-weighting Flag (flag)  
 3                 NAAOutFile  - Number of Output files. 0 for no output 1 for Time Dependent Overall SPL, 2 for both 1 and Frequency and Time Dependent SPL as well or 3 for both 1 and 2 and Acoustics mechanism dependent 
 "AAOutputFile"    AAOutFile   - No Extension needed the resulting file will have .out Name of file containing
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
