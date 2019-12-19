@@ -2,8 +2,8 @@ import numpy as np
 import os, shutil
 
 ## inputs
-folder_inputs   = 'C:/Material/Projects/Aeroacoustics/verifyAA/OpenFAST_IEA_LB_RWT/Airfoils'
-path2xfoil      = 'C:/Material/Programs/xfoil/'
+folder_inputs   = '../OpenFAST_IEA_LB_RWT/Airfoils'
+path2xfoil      = '/Users/pbortolo/work/Xfoil/bin/xfoil'
 folder_outputs  = folder_inputs
 n_stations      = 30
 aoa             = np.linspace(-5., 25., 30)             # List of angles of attack
@@ -65,7 +65,7 @@ for id in range(5,len(inputs_list)):
         fid.write('quit\n')
         fid.close()
         
-        os.system(path2xfoil + 'xfoilP4.exe < inputxfoil.vbs')
+        os.system(path2xfoil + ' < inputxfoil.vbs')
         
         os.remove('inputxfoil.vbs')
 
