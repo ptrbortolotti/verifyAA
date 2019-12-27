@@ -12,7 +12,7 @@ False        Echo         - Echo the input to "<rootname>.AD.ech"?  (flag)
 0.5          SurfRoughness- Surface roughness value used to estimate the turbulent length scale in Amiet model (m)
 1            TBLTEMod     - Turbulent Boundary Layer-Trailing Edge noise calculation {0: none, 1:BPM, 2: TNO} (switch)
 2            BLMod        - Calculation method for boundary layer properties,  {1: BPM, 2: Pretabulated} (switch)
-0            TripMod      - Boundary layer trip model {0:no trip, 1: heavy trip, 2: light trip} (switch) [Only used if BLMod=1]
+1            TripMod      - Boundary layer trip model {0:no trip, 1: heavy trip, 2: light trip} (switch) [Only used if BLMod=1]
 0            LamMod       - Laminar boundary layer noise model {0:none, 1: BPM}  (switch)
 0            TipMod       - Tip vortex noise model {0:none, 1: BPM}  (switch)
 True         RoundedTip   - Logical indicating rounded tip (flag) [Only used if TipMod=1]
@@ -26,16 +26,8 @@ True         RoundedTip   - Logical indicating rounded tip (flag) [Only used if 
 "AABlade1.dat"    AABlFile(2)   - Name of file containing distributed aerodynamic properties for Blade #2 (-)
 "AABlade1.dat"    AABlFile(3)   - Name of file containing distributed aerodynamic properties for Blade #3 (-)
 ======  Outputs  ====================================================================================
-False             AWeighting  - A-weighting Flag (flag)  
+True             AWeighting  - A-weighting Flag (flag)  
 3                 NAAOutFile  - Number of Output files. 0 for no output 1 for Time Dependent Overall SPL, 2 for both 1 and Frequency and Time Dependent SPL as well or 3 for both 1 and 2 and Acoustics mechanism dependent 
 "AAOutputFile"    AAOutFile   - No Extension needed the resulting file will have .out Name of file containing
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 ---------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-

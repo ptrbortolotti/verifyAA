@@ -28,10 +28,10 @@ import seaborn as sb
 ## User inputs
 
 # location for AAOutputFile3 and Test18_OF2 files
-input_dir = '../OpenFAST_IEA_LB_RWT/'
+input_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'
 
 # desired location for processed results
-output_dir = '../OpenFAST_IEA_LB_RWT/'
+output_dir = 'verify/OpenFAST_IEA_LB_RWT/'
 
 # appended name for AAOutputFile3: (i.e. yaw10deg_AAOutputFile3.out => outputname = "yaw10deg_". Leave outputname = "" if no modification
 outputname = ""
@@ -99,19 +99,19 @@ AA_3 = aa_3
 # rename mechanism for legend
 for i in range(0,AA_3.last_valid_index()+1):
     if AA_3.loc[i,"Mechanism"]=='1':
-        AA_3.loc[i,"Mechanism"]="LBL"
+        AA_3.loc[i,"Mechanism"]="LBL-VS"
     if AA_3.loc[i,"Mechanism"]=='2':
-        AA_3.loc[i,"Mechanism"]="TBL-Pressure"
+        AA_3.loc[i,"Mechanism"]="TBL-TE-PS"
     if AA_3.loc[i,"Mechanism"]=='3':
-        AA_3.loc[i,"Mechanism"]="TBL-Suction"
+        AA_3.loc[i,"Mechanism"]="TBL-TE-SS"
     if AA_3.loc[i,"Mechanism"]=='4':
-        AA_3.loc[i,"Mechanism"]="Separation"
+        AA_3.loc[i,"Mechanism"]="TBL-TE-AoA"
     if AA_3.loc[i,"Mechanism"]=='5':
-        AA_3.loc[i,"Mechanism"]="Blunt"
+        AA_3.loc[i,"Mechanism"]="TE Bluntness"
     if AA_3.loc[i,"Mechanism"]=='6':
-        AA_3.loc[i,"Mechanism"]="Tip"
+        AA_3.loc[i,"Mechanism"]="Tip Vortex"
     if AA_3.loc[i,"Mechanism"]=='7':
-        AA_3.loc[i,"Mechanism"]="Inflow"
+        AA_3.loc[i,"Mechanism"]="TI"
 
 AA_3["Observer"]=AA_3["Observer"].apply(pd.to_numeric)
 AA_3["Frequency (Hz)"]=AA_3["Frequency (Hz)"].apply(pd.to_numeric)
@@ -124,6 +124,7 @@ if plt_grid == True:
     g=sb.relplot(x="Frequency (Hz)",y="SPL (dB)",hue="Mechanism",col="Observer",col_wrap=num_cols,kind="line",data=AA_3)
     g.set(xscale='log')
     g.set(ylim=(0,None))
+    plt.grid(color=[0.8,0.8,0.8], linestyle='--')
 else:
     # plot if number of observers is less than 7. (Only 6 line styles.)
     if num_obs < 7:
@@ -133,10 +134,10 @@ else:
             ax=sb.lineplot(x=AA_3["Frequency (Hz)"],y=AA_3["SPL (dB)"],hue=AA_3["Mechanism"],legend = "full")
         else:
             ax=sb.lineplot(x=AA_3["Frequency (Hz)"],y=AA_3["SPL (dB)"],style=AA_3["Observer"],hue=AA_3["Mechanism"],legend = "full")
-        ax.legend(loc='center right',bbox_to_anchor=(1.45,0.5))
-        plt.subplots_adjust(right=.7)
+        # ax.legend(loc='center right',bbox_to_anchor=(1.45,0.5))
+        # plt.subplots_adjust(right=.7)
         ax.set_ylim(0,)
-
+        
         if save_fig == True:
             plt.save('{}-contour.png'.format(outputfilename))
 

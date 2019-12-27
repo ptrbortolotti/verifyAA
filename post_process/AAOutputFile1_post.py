@@ -26,8 +26,8 @@ import matplotlib.colors
 ## User inputs
 
 # location for AAOutputFile1, Test18_OF2, and AA_ObserverLocations files
-input_dir = r"C:\\openfast-matt\openfast-noise-test\openfast-noise-test\_outputs-OF2"
-loc_dir = r"C:\openfast-matt\openfast-noise-test\openfast-noise-test\5MW_Baseline"
+input_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'
+loc_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'
 
 # desired location for processed results
 output_dir = ".."
@@ -35,10 +35,10 @@ output_dir = ".."
 # appended name for AAOutputFile1: (i.e. yaw10deg_AAOutputFile1.out => outputname = "yaw10deg_". Leave outputname = "" if no modification
 outputname = ""
 AAname = outputname + "AAOutputFile1.out"
-OF2name = outputname + "Test18_OF2.out"
+OF2name = outputname + "RotorSE_FAST_IEA_landBased_RWT.outb"
 
 # location file name
-locname = "AA_ObserverLocations_grid_500m.dat"
+locname = "AA_ObserverLocations_Map.dat"
 
 # number of revolutions (n) to calculate OASPL
 n = 1
@@ -50,10 +50,10 @@ save_data = True
 #########################################################################################################################################
 
 # produces full file paths
-AAfilename = input_dir + '\\' + AAname
-OF2filename = input_dir + '\\' + OF2name
-locfilename = loc_dir + '\\' + locname
-outputfilename = output_dir + '\\' + outputname + "AAOutputFile1"
+AAfilename = input_dir + '/' + AAname
+OF2filename = input_dir + '/' + OF2name
+locfilename = loc_dir + '/' + locname
+outputfilename = output_dir + '/' + outputname + "AAOutputFile1"
 
 # reads in file data
 AA_1 = weio.FASTOutFile(AAfilename).toDataFrame()
@@ -106,7 +106,7 @@ else:
 
     fig1,ax1=plt.subplots()
     ax1.set_aspect('equal')
-    ax1.set_title('SPL Contour at 2m Height')
+    # ax1.set_title('OSPL Contour at 2m Height')
     ax1.set_xlabel('x [m]')
     ax1.set_ylabel('y [m]')
     tcf=ax1.tricontourf(x,y,z,)

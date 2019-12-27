@@ -28,11 +28,11 @@ import seaborn as sb
 ## User inputs
 
 # location for AAOutputFile2 and Test18_OF2 files
-fst_dir = '../OpenFAST_IEA_LB_RWT/'#r"C:\\openfast-noise-3\noite-test\_outputs-OF2"
-spl_dir = '../OpenFAST_IEA_LB_RWT/'
+fst_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'#r"C:\\openfast-noise-3\noite-test\_outputs-OF2"
+spl_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'
 
 # desired location for processed results
-output_dir = "openfast"
+output_dir = "verifyAA"
 
 # appended name for AAOutputFile2: (i.e. yaw10deg_AAOutputFile2.out => outputname = "yaw10deg_". Leave outputname = "" if no modification
 # outputname = ""
@@ -44,7 +44,7 @@ n = 1
 
 # save plot and/or data?
 save_fig = False
-save_data = False
+save_data = True
 
 #########################################################################################################################################
 
