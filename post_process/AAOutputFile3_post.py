@@ -28,10 +28,10 @@ import seaborn as sb
 ## User inputs
 
 # location for AAOutputFile3 and Test18_OF2 files
-input_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'
+input_dir = '../OpenFAST_IEA_LB_RWT'
 
 # desired location for processed results
-output_dir = 'verify/OpenFAST_IEA_LB_RWT/'
+output_dir = '../OpenFAST_IEA_LB_RWT'
 
 # appended name for AAOutputFile3: (i.e. yaw10deg_AAOutputFile3.out => outputname = "yaw10deg_". Leave outputname = "" if no modification
 outputname = ""
