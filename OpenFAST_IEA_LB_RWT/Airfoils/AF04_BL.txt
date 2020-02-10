@@ -1,9 +1,9 @@
-! Boundary layer characteristics at the trailing edge for the airfoil coordinates of C:/Material/Projects/Aeroacoustics/verifyAA/OpenFAST_IEA_LB_RWT/Airfoils/RotorSE_FAST_IEA_landBased_RWT_AeroDyn15_coords_05.txt
-! Legend: aoa - angle of attack (deg), Re - Reynolds number (-, millions), PS - pressure side, SS - suction side,  Ue_Vinf - edge velocity (-), Dstar - displacement thickness (-), Theta - momentum thickness (-) Cf  - friction coefficient (-)
+! Boundary layer characteristics at the trailing edge for the airfoil coordinates of /Users/pbortolo/work/2_openfast/noise/verifyAA/OpenFAST_IEA_LB_RWT/Airfoils/AF05_Coords.txt
+! Legend: aoa - angle of attack (deg), Re - Reynolds number (-, millions), PS - pressure side, SS - suction side,  Ue_Vinf - edge velocity (-), Dstar - displacement thickness (-), Delta - nominal boundary layer thickness (-) Cf  - friction coefficient (-)
 4 	 ReListBL   -  Number of Reynolds numbers (it corresponds to the number of tables)
 30 	 aoaListBL  -  Number of angles of attack (it corresponds to the number of rows in each table)
 0.50 	   -  Re
-aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Theta_SS 	 	  Theta_PS 	 	    Cf_SS 	 	    Cf_PS
+aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Delta_SS 	 	  Delta_PS 	 	    Cf_SS 	 	    Cf_PS
 (deg) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-)
 -5.00000 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 -3.96552 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
@@ -36,7 +36,7 @@ aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Theta_SS 	 	  The
 23.96552 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 25.00000 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 1.00 	   -  Re
-aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Theta_SS 	 	  Theta_PS 	 	    Cf_SS 	 	    Cf_PS
+aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Delta_SS 	 	  Delta_PS 	 	    Cf_SS 	 	    Cf_PS
 (deg) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-)
 -5.00000 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 -3.96552 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
@@ -69,7 +69,7 @@ aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Theta_SS 	 	  The
 23.96552 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 25.00000 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 5.00 	   -  Re
-aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Theta_SS 	 	  Theta_PS 	 	    Cf_SS 	 	    Cf_PS
+aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Delta_SS 	 	  Delta_PS 	 	    Cf_SS 	 	    Cf_PS
 (deg) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-)
 -5.00000 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 -3.96552 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
@@ -102,7 +102,7 @@ aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Theta_SS 	 	  The
 23.96552 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 25.00000 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 10.00 	   -  Re
-aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Theta_SS 	 	  Theta_PS 	 	    Cf_SS 	 	    Cf_PS
+aoa 	 	 Ue_Vinf_SS 	 Ue_Vinf_PS 	  Dstar_SS 	 	  Dstar_PS 	 	  Delta_SS 	 	  Delta_PS 	 	    Cf_SS 	 	    Cf_PS
 (deg) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-) 	 	 	 (-)
 -5.00000 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
 -3.96552 	 0.00000000 	 0.00000000 	 0.00000000       0.00000000      0.00000000     0.00000000       0.00000000      0.00000000
