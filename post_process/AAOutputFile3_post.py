@@ -28,10 +28,10 @@ import seaborn as sb
 ## User inputs
 
 # location for AAOutputFile3 and Test18_OF2 files
-input_dir = '../OpenFAST_IEA_LB_RWT'
+input_dir = '/Users/pbortolo/work/2_openfast/noise/verifyAA/OpenFAST_IEA_LB_RWT'
 
 # desired location for processed results
-output_dir = '../OpenFAST_IEA_LB_RWT'
+output_dir = '/Users/pbortolo/work/2_openfast/noise/verifyAA/OpenFAST_IEA_LB_RWT'
 
 # appended name for AAOutputFile3: (i.e. yaw10deg_AAOutputFile3.out => outputname = "yaw10deg_". Leave outputname = "" if no modification
 outputname = ""
@@ -44,7 +44,7 @@ n = 1
 # save plot and/or data?
 plt_grid = True            # creates subplot for each observer if True
 save_fig = False
-save_data = False
+save_data = True
 
 #########################################################################################################################################
 

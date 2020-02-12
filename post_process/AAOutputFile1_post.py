@@ -26,11 +26,11 @@ import matplotlib.colors
 ## User inputs
 
 # location for AAOutputFile1, Test18_OF2, and AA_ObserverLocations files
-input_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'
-loc_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'
+input_dir = '/Users/pbortolo/work/2_openfast/noise/verifyAA/OpenFAST_IEA_LB_RWT/'
+loc_dir = '/Users/pbortolo/work/2_openfast/noise/verifyAA/OpenFAST_IEA_LB_RWT/'
 
 # desired location for processed results
-output_dir = ".."
+output_dir = "/Users/pbortolo/Dropbox/Writing/NoiseTechReport"
 
 # appended name for AAOutputFile1: (i.e. yaw10deg_AAOutputFile1.out => outputname = "yaw10deg_". Leave outputname = "" if no modification
 outputname = ""
@@ -44,8 +44,8 @@ locname = "AA_ObserverLocations_Map.dat"
 n = 1
 
 # save plot and/or data to output directory?
-save_fig = False
-save_data = True
+save_fig = True
+save_data = False
 
 #########################################################################################################################################
 
@@ -113,7 +113,7 @@ else:
     fig1.colorbar(tcf,orientation="horizontal")
     ax1.tricontour(x,y,z,colors='None')
     if save_fig == True:
-        plt.savefig('{}-contour.png'.format(outputfilename))
+        plt.savefig('{}-contour.pdf'.format(outputfilename))
 
     plt.show()
 
