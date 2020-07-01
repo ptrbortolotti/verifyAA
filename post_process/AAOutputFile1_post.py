@@ -44,7 +44,7 @@ locname = "AA_ObserverLocations_Map.dat"
 n = 1
 
 # save plot and/or data to output directory?
-save_fig = True
+save_fig = False
 save_data = False
 
 #########################################################################################################################################
@@ -65,6 +65,7 @@ num_obs = AA_1.shape[1]-1
 
 # calculate sample time for n revolutions
 rpm = OF2[["RotSpeed_[rpm]"]].mean()[0]
+yaw = OF2[["YawPzn_[deg]"]].mean()[0] / 180. * np.pi
 time_revs = n*60/rpm
 tot_time = AA_1["Time_[s]"].max()
 if time_revs < tot_time:
@@ -103,18 +104,29 @@ else:
     x=AA_1['x'];
     y=AA_1['y'];
     z=AA_1['SPL'];
-
+    fs = 10
     fig1,ax1=plt.subplots()
     ax1.set_aspect('equal')
     # ax1.set_title('OSPL Contour at 2m Height')
-    ax1.set_xlabel('x [m]')
-    ax1.set_ylabel('y [m]')
+    ax1.set_xlabel('x [m]', fontsize=fs+2, fontweight='bold')
+    ax1.set_ylabel('y [m]', fontsize=fs+2, fontweight='bold')
+    # ax1.set_clabel('z [m]', fontsize=fs+2, fontweight='bold')
     tcf=ax1.tricontourf(x,y,z,)
-    fig1.colorbar(tcf,orientation="horizontal")
-    ax1.tricontour(x,y,z,colors='None')
-    if save_fig == True:
-        plt.savefig('{}-contour.pdf'.format(outputfilename))
+    fig1.colorbar(tcf,orientation="vertical").set_label(label = 'Overall SPL [dB]', fontsize=fs+2,weight='bold')
+    R = 65.
+    x0 = np.array([0., 0.])
+    y0 = np.array([-R, R])
+    x1 = x0 * np.cos(yaw) - y0 * np.sin(yaw)
+    y1 = x0 * np.sin(yaw) + y0 * np.cos(yaw)
 
+    plt.plot(x1, y1, color = 'w', linewidth = 3)
+    plt.plot(0, 0, marker = 'o', color = 'w', markersize = 5)
+    ax1.tricontour(x,y,z, colors='None')
+    if save_fig == True:
+        # plt.savefig('{}-contour.pdf'.format(outputfilename))
+        folder2 = '/Users/pbortolo/Dropbox/Writing/NoiseTechReport/'
+        fig_name = 'temp.pdf'
+        fig1.savefig(folder2 + fig_name)
     plt.show()
 
 # export to csv

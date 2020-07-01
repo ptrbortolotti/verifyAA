@@ -9,7 +9,7 @@ False        Echo         - Echo the input to "<rootname>.AD.ech"?  (flag)
 ======  Aeroacoustic Models  ============================================================================
 1            TIMod        - Turbulent Inflow noise model  {0: none, 1: Amiet 2: Amiet + Simplified Guidati} (switch) 
 1            TICalcMeth   - Method to estimate turbulence intensity incident to the profile {1: given table, 2: computed on the fly} (switch) [Only used if TIMod!=0]
-"TIGrid_In2.txt"   TICalcTabFile - Name of the file containing the table for incident turbulence intensity (-) [Only used if TiCalcMeth == 1]
+"TIGrid_InVerify.txt"   TICalcTabFile - Name of the file containing the table for incident turbulence intensity (-) [Only used if TiCalcMeth == 1]
 0.5          SurfRoughness- Surface roughness value used to estimate the turbulent length scale in Amiet model (m)
 0            TBLTEMod     - Turbulent Boundary Layer-Trailing Edge noise calculation {0: none, 1:BPM, 2: TNO} (switch)
 1            BLMod        - Calculation method for boundary layer properties,  {1: BPM, 2: Pretabulated} (switch)

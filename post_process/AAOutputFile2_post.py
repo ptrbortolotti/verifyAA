@@ -28,11 +28,11 @@ import seaborn as sb
 ## User inputs
 
 # location for AAOutputFile2 and Test18_OF2 files
-fst_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'#r"C:\\openfast-noise-3\noite-test\_outputs-OF2"
-spl_dir = 'verifyAA/OpenFAST_IEA_LB_RWT/'
+fst_dir = '/Users/pbortolo/work/2_openfast/noise/verifyAA/OpenFAST_IEA_LB_RWT/'#r"C:\\openfast-noise-3\noite-test\_outputs-OF2"
+spl_dir = '/Users/pbortolo/work/2_openfast/noise/verifyAA/OpenFAST_IEA_LB_RWT/'
 
 # desired location for processed results
-output_dir = "verifyAA"
+output_dir = "/Users/pbortolo/work/2_openfast/noise/verifyAA/OpenFAST_IEA_LB_RWT/"
 
 # appended name for AAOutputFile2: (i.e. yaw10deg_AAOutputFile2.out => outputname = "yaw10deg_". Leave outputname = "" if no modification
 # outputname = ""
@@ -44,14 +44,14 @@ n = 1
 
 # save plot and/or data?
 save_fig = False
-save_data = True
+save_data = False
 
 #########################################################################################################################################
 
 # produces full path
 AAfilename = spl_dir + AAname
 OF2filename = fst_dir + OF2name
-outputfilename = output_dir + '/' + "AAOutputFile2"
+outputfilename = output_dir + "AAOutputFile2"
 
 # read in file data
 AA_2 = weio.FASTOutFile(AAfilename).toDataFrame()

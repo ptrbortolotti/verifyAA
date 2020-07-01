@@ -120,6 +120,8 @@ True                   TabDelim    - Use tab delimiters in text tabular output f
 3                      NBlGages    - Number of blade nodes that have strain gages for output [0 to 9] (-)
           5,             9,            13    BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
                    OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
-"Azimuth, BldPitch1, GenSpeed, IPDefl1, LSSGagMya, LSSGagMza, OoPDefl1, RootFxb1, RootFyb1, RootFzb1, RootMxb1, RootMyb1, RootMzb1, RotSpeed, RotTorq, Spn2MLxb1, Spn2MLyb1, TTDspFA, TTDspSS, TTDspTwst, TwrBsFxt, TwrBsFyt, TwrBsFzt, TwrBsMxt, TwrBsMyt, TwrBsMzt, TwstDefl1, YawBrFxp, YawBrFyp, YawBrFzp, YawBrMxp, YawBrMyp, YawBrMzp"
+"Azimuth, BldPitch1, GenSpeed, IPDefl1, LSSGagMya, LSSGagMza, OoPDefl1"
+"RootFxb1, RootFyb1, RootFzb1, RootMxb1, RootMyb1, RootMzb1"
+"RotSpeed, RotTorq, YawPzn"
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 ---------------------------------------------------------------------------------------
