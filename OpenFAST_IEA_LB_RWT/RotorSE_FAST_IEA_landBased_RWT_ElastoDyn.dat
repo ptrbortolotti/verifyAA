@@ -1,9 +1,9 @@
 ------- ELASTODYN v1.03.* INPUT FILE -------------------------------------------
-AeroElasticSE FAST driver
+IEA task 37 RWT turbine -- https://github.com/IEAWindTask37/IEA-3.4-130-RWT
 ---------------------- SIMULATION CONTROL --------------------------------------
 False                  Echo        - Echo input data to "<RootName>.ech" (flag)
 3                      Method      - Integration method: {1: RK4, 2: AB4, or 3: ABM4} (-)
-"DEFAULT"              DT          Integration time step (s)
+"DEFAULT"              DT          - Integration time step (s)
 ---------------------- ENVIRONMENTAL CONDITION ---------------------------------
 9.80665                Gravity     - Gravitational acceleration (m/s^2)
 ---------------------- DEGREES OF FREEDOM --------------------------------------
@@ -116,9 +116,9 @@ True                   TabDelim    - Use tab delimiters in text tabular output f
 0.0                    TStart      - Time to begin tabular output (s) (currently unused)
 1                      DecFact     - Decimation factor for tabular output {1: output every time step} (-) (currently unused)
 0                      NTwGages    - Number of tower nodes that have strain gages for output [0 to 9] (-)
-         10,            19,            28    TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0]
+         10,            19,            28    TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0]
 3                      NBlGages    - Number of blade nodes that have strain gages for output [0 to 9] (-)
-          5,             9,            13    BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
+          5,             9,            13    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
                    OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
 "Azimuth, BldPitch1, GenSpeed, IPDefl1, LSSGagMya, LSSGagMza, OoPDefl1"
 "RootFxb1, RootFyb1, RootFzb1, RootMxb1, RootMyb1, RootMzb1"

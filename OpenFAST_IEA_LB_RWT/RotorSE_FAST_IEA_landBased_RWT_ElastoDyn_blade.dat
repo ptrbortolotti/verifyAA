@@ -1,5 +1,5 @@
 ------- ELASTODYN V1.00.* INDIVIDUAL BLADE INPUT FILE --------------------------
-AeroElasticSE FAST driver
+IEA task 37 RWT turbine -- https://github.com/IEAWindTask37/IEA-3.4-130-RWT
 ---------------------- BLADE PARAMETERS ----------------------------------------
 30                     NBlInpSt    - Number of blade input stations (-)
 0.477465               BldFlDmp1   - Blade flap mode #1 structural damping in percent of critical (%)

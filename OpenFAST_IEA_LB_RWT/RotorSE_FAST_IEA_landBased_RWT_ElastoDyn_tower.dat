@@ -1,5 +1,5 @@
 ------- ELASTODYN V1.00.* TOWER INPUT FILE -------------------------------------
-AeroElasticSE FAST driver
+IEA task 37 RWT turbine -- https://github.com/IEAWindTask37/IEA-3.4-130-RWT
 ---------------------- TOWER PARAMETERS ----------------------------------------
 11                     NTwInptSt   - Number of input stations to specify tower geometry
 1.0                    TwrFADmp(1) - Tower 1st fore-aft mode structural damping ratio (%)
