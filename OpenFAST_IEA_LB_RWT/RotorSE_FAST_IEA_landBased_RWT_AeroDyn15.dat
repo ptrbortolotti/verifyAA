@@ -10,8 +10,8 @@ False                  TwrShadow   - Calculate tower influence on wind based on 
 False                  TwrAero     - Calculate tower aerodynamic loads? (flag)
 False                  FrozenWake  - Assume frozen wake during linearization? (flag) [used only when WakeMod=1 and when linearizing]
 False                  CavitCheck  - Perform cavitation check? (flag) [AFAeroMod must be 1 when CavitCheck=true]
-True                   CompAA      - Flag to compute AeroAcoustics calculation  
-"AeroAcousticsInput.dat"  AA_InputFile
+True                   CompAA      - Flag to compute AeroAcoustics calculation [only used when WakeMod=1 or 2]
+"AeroAcousticsInput.dat"  AA_InputFile - Aeroacoustics input file
 ======  Environmental Conditions  ===================================================================
  1.225000000000000e+00 AirDens     - Air density (kg/m^3)
  1.812060000000000e-05 KinVisc     - Kinematic air viscosity (m^2/s)
